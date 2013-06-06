@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+
+git fetch && git wip && git rebase --stat origin/master && git unwip
+git heads
