@@ -3,7 +3,7 @@ if [[ $- != *i* ]]; then
   return
 fi
 
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/src/dotfiles
 PATH=$DOTFILES/bin:$PATH
 
 for config_file in $DOTFILES/**/*.bashrc
