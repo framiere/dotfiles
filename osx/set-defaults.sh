@@ -81,12 +81,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
-
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
-
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
@@ -124,7 +118,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Use column view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder FXPreferredViewStyle clmv
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
@@ -139,11 +133,19 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Disable the “reopen windows when logging back in” option 
+# This works, although the checkbox will still appear to be checked. 
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false 
+defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false 
 
+# Background image
+defaults write com.apple.desktop Background '{default = {ImageFilePath = "~/src/dotfiles/osx/background2.png"; };}'
 
-
-
+# Open Finder on Home
+defaults write com.apple.finder NewWindowTarget PfHm
 
 
 
