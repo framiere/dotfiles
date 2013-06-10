@@ -2,6 +2,7 @@ brew update
 
 brew tap phinze/homebrew-cask
 brew install brew-cask
+brew cask alfred link
 brew cask install super-duper
 brew cask install transmission
 brew cask install imageoptim
