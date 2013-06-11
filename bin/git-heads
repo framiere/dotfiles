@@ -1,5 +1,10 @@
 #!/bin/sh
 #
 
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+if [ $? -ne 0 ]; then
+    echo "Not a git repository"
+    exit 1;
+fi
+
 git log origin/${BRANCH}.. --format="%Cred%h%Creset%x09%C(yellow)%an%Creset%x09%H%x09%Cgreen%f%Creset" | git name-rev --stdin --always --name-only
