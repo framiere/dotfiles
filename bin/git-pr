@@ -2,5 +2,8 @@
 #
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-git fetch && git wip && git rebase --stat origin/${BRANCH} && git unwip
+git fetch
+git wip
+git rebase --stat origin/${BRANCH}
+git unwip
 git heads
