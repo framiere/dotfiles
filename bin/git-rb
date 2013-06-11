@@ -1,5 +1,6 @@
 #!/bin/sh
 #
 
-git wip && git rebase -i --autosquash origin/master && git unwip
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git wip && git rebase -i --autosquash origin/${BRANCH} && git unwip
 git heads
