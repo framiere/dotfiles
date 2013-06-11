@@ -2,4 +2,4 @@
 #
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-git log origin/${BRANCH}.. --format='%Cred%h%Creset\t%C(yellow)%an%Creset\t%H\t%Cgreen%f%Creset' | git name-rev --stdin --always --name-only
+git log origin/${BRANCH}.. --format="%Cred%h%Creset%x09%C(yellow)%an%Creset%x09%H%x09%Cgreen%f%Creset" | git name-rev --stdin --always --name-only
