@@ -10,5 +10,9 @@ fi
 git fetch
 git wip
 git rebase --stat origin/${BRANCH}
+if [ $? -ne 0 ]; then
+    exit 1;
+fi
+
 git unwip
 git heads
