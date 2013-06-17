@@ -9,3 +9,4 @@ brew cask install imageoptim
 brew cask install imagealpha
 brew cask install namemangler
 brew cask install open-office
+brew cask install subtitles
