@@ -3,14 +3,12 @@ if [[ $- != *i* ]]; then
   return
 fi
 
+[ -f /opt/boxen/env.sh ] && . /opt/boxen/env.sh
+[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
+
 export CLICOLOR=1
 export DOTFILES=$HOME/src/dotfiles
 export JAVA_HOME=$(/usr/libexec/java_home -F -v 1.6 -a x86_64 -d64)
-
-PATH=$DOTFILES/bin:$PATH
-PATH=$HOME/.jenv/bin:$PATH
-
-eval "$(jenv init -)"
 
 for config_file in $DOTFILES/**/*.bashrc; do
   source $config_file
@@ -19,6 +17,8 @@ unset config_file
 
 CDPATH=.:~:~/src
 
-[ -f /opt/boxen/env.sh ] && . /opt/boxen/env.sh
-[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
+PATH=$DOTFILES/bin:$PATH
+PATH=$HOME/.jenv/bin:$PATH
+
+eval "$(jenv init -)"
 
