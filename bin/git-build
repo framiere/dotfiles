@@ -27,6 +27,24 @@ function exit_ok {
   exit 0
 }
 
+function rollback_wip() {
+  git log -1 | grep -q -c "wip" && git reset HEAD~1
+}
+
+# Update with remote
+git fetch ${REMOTE}
+git add -A $REPO_DIR && git commit -m "wip"
+REBASE="$REMOTE/$BRANCH"
+git branch -r | grep -q -c ${REBASE} || REBASE="$REMOTE/master"
+echo "rebase ${REBASE}"
+git rebase ${REBASE}
+if [ "$?" -ne 0 ]; then
+  git rebase --abort
+  rollback_wip
+  exit_fail "Unable to rebase!"
+fi
+rollback_wip
+
 # Private clone
 rm -Rf ${BUILD_DIR}
 git clone -slb "${BRANCH}" ${REPO_DIR} ${BUILD_DIR}
