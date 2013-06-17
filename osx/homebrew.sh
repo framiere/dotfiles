@@ -11,3 +11,4 @@ brew cask install namemangler
 brew cask install open-office
 brew cask install subtitles
 brew cask install github
+brew cask install growlnotify
