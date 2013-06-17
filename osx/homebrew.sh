@@ -10,3 +10,4 @@ brew cask install imagealpha
 brew cask install namemangler
 brew cask install open-office
 brew cask install subtitles
+brew cask install github
