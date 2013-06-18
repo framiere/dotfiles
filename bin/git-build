@@ -2,6 +2,7 @@
 
 LOCATION=$(pwd)
 REMOTE=${1:-origin}
+REMOTE_URL=$(git ls-remote --get-url ${REMOTE})
 BRANCH=$(git symbolic-ref -q HEAD)
 BRANCH=${BRANCH##refs/heads/}
 
@@ -33,9 +34,9 @@ function rollback_wip() {
 
 # Update with remote
 git fetch ${REMOTE}
-git add -A $REPO_DIR && git commit -m "wip"
-REBASE="$REMOTE/$BRANCH"
-git branch -r | grep -q -c ${REBASE} || REBASE="$REMOTE/master"
+git add -A ${REPO_DIR} && git commit -m "wip"
+REBASE="${REMOTE}/${BRANCH}"
+git branch -r | grep -q -c ${REBASE} || REBASE="${REMOTE}/master"
 echo "rebase ${REBASE}"
 git rebase ${REBASE}
 if [ "$?" -ne 0 ]; then
@@ -55,6 +56,12 @@ git pull --rebase
 eval ${COMMAND}
 if [ $? -ne 0 ]; then
   exit_fail "Unable to build!"
+fi
+
+# Push
+git push ${REMOTE_URL} ${BRANCH}
+if [ $? -ne 0 ]; then
+	exit_ko "Unable to push"
 fi
 
 # Update working directory
