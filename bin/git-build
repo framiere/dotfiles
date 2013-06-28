@@ -61,7 +61,7 @@ fi
 # Push
 git push ${REMOTE_URL} ${BRANCH}
 if [ $? -ne 0 ]; then
-	exit_ko "Unable to push"
+  exit_fail "Unable to push"
 fi
 
 # Update working directory
