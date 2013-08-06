@@ -1,6 +1,7 @@
 #!/bin/sh
 
 brew update
+brew install git
 brew install ack
 brew install the_silver_searcher
 brew install bash-completion
