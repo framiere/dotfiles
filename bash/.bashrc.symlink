@@ -9,6 +9,7 @@ fi
 export CLICOLOR=1
 export DOTFILES=$HOME/src/dotfiles
 export JAVA_HOME=$(/usr/libexec/java_home -F -v 1.6 -a x86_64 -d64)
+export MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=1G"
 
 for config_file in $DOTFILES/**/*.bashrc; do
   source $config_file
