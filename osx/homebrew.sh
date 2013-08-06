@@ -1,43 +1,75 @@
 #!/bin/sh
 
+command -v brew >/dev/null 2>&1
+if [ "$?" -ne "0" ]; then
+    echo 'Install Homebrew: http://brew.sh/'
+    exit 1
+fi
+
+brew doctor
 brew update
-brew install git
-brew install ack
-brew install the_silver_searcher
-brew install bash-completion
-brew install dos2unix
-brew install gradle
-brew install ioke
-brew install jsonpp
-brew install jq
-brew install maven
-brew install md5sha1sum
-brew install phantomjs
-brew install parallel
-brew install pngcrush
-brew install sonar
-brew install ssh-copy-id
-brew install tree
-brew install watch
-brew install pigz
-brew install tig
-brew install hub
-brew install wget
-brew install watch
-brew install mongodb
-brew install cloudbees-sdk
-brew tap phinze/homebrew-cask
-brew install brew-cask
-brew cask alfred link
-brew cask install super-duper
-brew cask install transmission
-brew cask install imageoptim
-brew cask install imagealpha
-brew cask install namemangler
-brew cask install open-office
-brew cask install subtitles
-brew cask install github
-brew cask install growlnotify
-brew cask install pacifist
-brew cask install slate
-brew cask install gitx
+brew upgrade
+
+if [[ $(brew tap) != *cask* ]]; then
+	brew tap phinze/homebrew-cask
+	brew cask alfred link
+fi
+
+FORMULAS_TO_INSTALL=(
+	ack
+	bash-completion
+	brew-cask
+	cloudbees-sdk
+	dos2unix
+	git
+	gradle
+	hub
+	ioke
+	jq
+	jsonpp
+	maven
+	md5sha1sum
+	mongodb
+	parallel
+	phantomjs
+	pigz
+	pngcrush
+	sonar
+	ssh-copy-id
+	the_silver_searcher
+	tig
+	tree
+	watch
+	wget
+)
+
+for i in $(brew list); do
+	FORMULAS_TO_INSTALL=(${FORMULAS_TO_INSTALL[@]//*$i*})
+done
+
+for FORMULA in ${FORMULAS_TO_INSTALL}; do
+	brew install ${FORMULA}
+done
+
+CASK_FORMULAS_TO_INSTALL=(
+	github
+	gitx
+	growlnotify
+	imagealpha
+	imageoptim
+	namemangler
+	open-office
+	pacifist
+	slate
+	subtitles
+	super-duper
+	transmission
+)
+
+for i in $(brew cask list); do
+	CASK_FORMULAS_TO_INSTALL=(${CASK_FORMULAS_TO_INSTALL[@]//*$i*})
+done
+
+for FORMULA in ${CASK_FORMULAS_TO_INSTALL}; do
+	brew cask install ${CASK_FORMULAS_TO_INSTALL}
+done
