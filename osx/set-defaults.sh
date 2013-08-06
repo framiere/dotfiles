@@ -142,7 +142,7 @@ defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false 
 
 # Background image
-defaults write com.apple.desktop Background '{default = {ImageFilePath = "~/src/dotfiles/osx/background2.png"; };}'
+defaults write com.apple.desktop Background '{default = {ImageFilePath = "~/src/dotfiles/osx/background.png"; };}'
 
 # Open Finder on Home
 defaults write com.apple.finder NewWindowTarget PfHm
