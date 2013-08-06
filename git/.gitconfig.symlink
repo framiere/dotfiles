@@ -1,0 +1,44 @@
+[user]
+	email = david@gageot.net
+	name = David Gageot
+
+[github]
+	user = dgageot
+		
+[core]
+	editor = mate -wl1
+	excludesfile = ~/.global_ignore
+
+[hub]
+	protocol = https
+
+[color]
+	ui = auto
+
+[svn]
+	rmdir = true
+
+[diff]
+	renamelimit = 0
+
+[alias]
+	cp = cherry-pick
+	st = status
+	br = branch
+	undo = reset --hard "HEAD~1"
+	uncommit = reset "HEAD~1"
+	lg = log --graph --branches --oneline --graph --decorate
+	co = checkout
+	lost = !"git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+
+[push]
+	default = simple
+
+[help]
+	autocorrect = 10
+
+[merge]
+	conflictstyle = merge
+
+[rerere]
+	enabled = 1
