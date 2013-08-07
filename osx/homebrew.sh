@@ -30,6 +30,7 @@ FORMULAS_TO_INSTALL=(
 	maven
 	md5sha1sum
 	mongodb
+	node
 	parallel
 	phantomjs
 	pigz
