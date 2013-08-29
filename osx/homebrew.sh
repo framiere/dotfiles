@@ -65,6 +65,8 @@ CASK_FORMULAS_TO_INSTALL=(
 	subtitles
 	super-duper
 	transmission
+	vagrant
+	virtualbox
 )
 
 for i in $(brew cask list); do
