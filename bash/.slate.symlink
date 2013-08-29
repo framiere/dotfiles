@@ -50,17 +50,17 @@ bind 4:alt,cmd move screenSizeX/2;0 screenSizeX/2;screenSizeY/2
 bind 5:alt,cmd move screenSizeX/2;screenSizeY/2 screenSizeX/2;screenSizeY/2
 
 # Resize Bindings
-bind right:alt,cmd       resize +10%  +0%
-bind left:alt,cmd        resize -10%  +0%
-bind up:alt,cmd          resize  +0% -10%
-bind down:alt,cmd        resize  +0% +10%
-bind left:alt,cmd,shift  resize +10%  +0% bottom-right
-bind right:alt,cmd,shift resize -10%  +0% bottom-right
-bind down:alt,cmd,shift  resize  +0% -10% bottom-right
-bind up:alt,cmd,shift    resize  +0% +10% bottom-right
+#bind right:alt,cmd       resize +10%  +0%
+#bind left:alt,cmd        resize -10%  +0%
+#bind up:alt,cmd          resize  +0% -10%
+#bind down:alt,cmd        resize  +0% +10%
+#bind left:alt,cmd,shift  resize +10%  +0% bottom-right
+#bind right:alt,cmd,shift resize -10%  +0% bottom-right
+#bind down:alt,cmd,shift  resize  +0% -10% bottom-right
+#bind up:alt,cmd,shift    resize  +0% +10% bottom-right
 
 # Push Bindings
-bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
-bind left:ctrl;cmd   push left  bar-resize:screenSizeX/3
-bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
-bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
+#bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
+#bind left:ctrl;cmd   push left  bar-resize:screenSizeX/3
+#bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
+#bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
