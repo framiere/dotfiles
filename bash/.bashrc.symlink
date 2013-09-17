@@ -23,3 +23,5 @@ PATH=$HOME/.jenv/bin:$PATH
 
 eval "$(jenv init -)"
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
