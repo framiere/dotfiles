@@ -23,6 +23,7 @@ FORMULAS_TO_INSTALL=(
 	dos2unix
 	git
 	gradle
+	heroku-toolbelt
 	hub
 	ioke
 	jq
