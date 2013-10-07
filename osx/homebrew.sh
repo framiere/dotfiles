@@ -42,9 +42,11 @@ brew install watch
 brew install wget
 
 brew cask install alfred
+brew cask install dropbox
 brew cask install google-chrome
 brew cask install github
 brew cask install gitx
+brew cask install google-drive
 brew cask install growlnotify
 brew cask install imagealpha
 brew cask install imageoptim
