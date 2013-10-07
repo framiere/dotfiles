@@ -1,3 +1,5 @@
+#!/bin/sh
+#
 # Sets reasonable OS X defaults.
 #
 # Or, in other words, set shit how I like in OS X.
@@ -140,9 +142,6 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # This works, although the checkbox will still appear to be checked. 
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false 
 defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false 
-
-# Background image
-defaults write com.apple.desktop Background '{default = {ImageFilePath = "~/src/dotfiles/osx/background.png"; };}'
 
 # Open Finder on Home
 defaults write com.apple.finder NewWindowTarget PfHm
