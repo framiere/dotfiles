@@ -13,3 +13,6 @@ target/
 
 ## osx
 .DS_Store
+
+## jenv
+.java-version
