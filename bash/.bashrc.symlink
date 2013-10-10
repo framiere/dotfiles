@@ -15,7 +15,7 @@ for config_file in $DOTFILES/**/*.bashrc; do
 done
 unset config_file
 
-CDPATH=.:~:~/src
+CDPATH=.:~:${HOME}/src
 
 PATH=$(brew --prefix)/bin:$PATH
 PATH=$DOTFILES/bin:$PATH
