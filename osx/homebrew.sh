@@ -63,6 +63,4 @@ brew cask install subtitles
 brew cask install super-duper
 brew cask install textmate
 brew cask install transmission
-brew cask install vagrant
-brew cask install virtualbox
 brew cask install vlc
