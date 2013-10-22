@@ -19,6 +19,7 @@ brew install ack
 brew install bash-completion
 brew install cloudbees-sdk
 brew install dos2unix
+brew install gpg
 brew install gradle
 brew install heroku-toolbelt
 brew install hub
@@ -55,7 +56,9 @@ brew cask install iterm2
 brew cask install namemangler
 brew cask install open-office
 brew cask install pacifist
+brew cask install skype
 brew cask install slate
+brew cask install spotify
 brew cask install subtitles
 brew cask install super-duper
 brew cask install textmate
