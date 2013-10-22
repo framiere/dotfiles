@@ -23,7 +23,7 @@
 
 [alias]
 	cp = cherry-pick
-	st = status
+	st = status -sb
 	br = branch
 	undo = reset --hard "HEAD~1"
 	uncommit = reset "HEAD~1"
