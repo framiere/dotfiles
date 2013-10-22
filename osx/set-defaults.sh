@@ -9,6 +9,12 @@
 #
 # Run ./set-defaults.sh and you'll be good to go.
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
@@ -122,6 +128,9 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle clmv
 
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
@@ -146,7 +155,10 @@ defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
 # Open Finder on Home
 defaults write com.apple.finder NewWindowTarget PfHm
 
+# Scripts
+osascript scripts/contacts.scpt > /dev/null
 
-
+# Restart applications
+killall Finder Contacts
 
 
