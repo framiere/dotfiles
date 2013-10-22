@@ -14,7 +14,7 @@ task :install do
 
     file = convert(linkable)
     source = "#{ENV["PWD"]}/#{linkable}"
-    target = "#{ENV["HOME"]}/#{file}"
+    target = "#{ENV["HOME"]}/.#{file}"
 
     if File.exists?(target) || File.symlink?(target)
       unless skip_all || overwrite_all || backup_all
@@ -29,7 +29,7 @@ task :install do
         end
       end
       run %{ rm "#{target}" } if overwrite || overwrite_all
-      run %{ mv "$HOME/#{file}" "$HOME/#{file}.dotfile-backup" } if backup || backup_all
+      run %{ mv "#{target}" "$HOME/.#{file}.dotfile-backup" } if backup || backup_all
     end
     run %{ ln -s "#{source}" "#{target}" }
   end
