@@ -43,7 +43,7 @@ if [ ! -f $(brew --prefix)/bin/mate ]; then
 	echo "Install mate terminal tool"
 	cp /opt/homebrew-cask/Caskroom/textmate/latest/TextMate.app/Contents/Resources/mate $(brew --prefix)/bin/mate
 fi
-if [ ! -f ~/.jenv ]; then
+if [ ! -d ~/.jenv ]; then
 	echo "Install jenv"
 	git clone https://github.com/gcuisinier/jenv.git ~/.jenv
 	export PATH="$HOME/.jenv/bin:$PATH"
