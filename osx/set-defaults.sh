@@ -156,7 +156,7 @@ defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
 defaults write com.apple.finder NewWindowTarget PfHm
 
 # Scripts
-osascript scripts/contacts.scpt > /dev/null
+# osascript scripts/contacts.scpt > /dev/null
 
 # Restart applications
 killall Finder Contacts
