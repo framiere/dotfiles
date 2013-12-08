@@ -33,6 +33,8 @@ if [ ! -z "${TO_INSTALL}" ]; then
 	brew cask install ${TO_INSTALL}
 fi
 
+brew cask alfred link
+
 # Install terminal tools
 #
 if [ ! -f $(brew --prefix)/bin/gitx ]; then
