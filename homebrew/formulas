@@ -2,6 +2,7 @@ ack
 bash-completion
 cloudbees-sdk
 dos2unix
+git-crypt
 gnupg
 gradle
 heroku-toolbelt
