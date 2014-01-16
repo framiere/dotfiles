@@ -4,6 +4,7 @@ cloudbees-sdk
 dos2unix
 git-crypt
 gnupg
+gource
 gradle
 heroku-toolbelt
 hub
