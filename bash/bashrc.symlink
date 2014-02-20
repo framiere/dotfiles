@@ -7,6 +7,7 @@ export CLICOLOR=1
 export DOTFILES="${HOME}/src/dotfiles"
 export MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=1G"
 export MANPAGER="$(brew --prefix)/bin/most -s"
+export DOCKER_HOST=tcp://
 
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
@@ -17,6 +18,7 @@ unset config_file
 
 CDPATH=.:${HOME}:${HOME}/src
 
+PATH=${HOME}/bin:${PATH}
 PATH=$(brew --prefix)/bin:${PATH}
 PATH=${DOTFILES}/bin:${PATH}
 PATH=${HOME}/.jenv/bin:${PATH}
