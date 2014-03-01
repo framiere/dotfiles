@@ -1,7 +1,10 @@
 ack
 bash-completion
+boot2docker
 cloudbees-sdk
+docker
 dos2unix
+gcutils
 git-crypt
 gnupg
 gource
