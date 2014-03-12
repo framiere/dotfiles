@@ -4,7 +4,7 @@ boot2docker
 cloudbees-sdk
 docker
 dos2unix
-gcutils
+gcutil
 git-crypt
 gnupg
 gource
