@@ -17,6 +17,7 @@ jsonpp
 maven
 mongodb
 most
+ngrok
 node
 parallel
 pigz
