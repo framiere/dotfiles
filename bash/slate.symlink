@@ -48,6 +48,7 @@ bind 2:alt,cmd move 0;0 screenSizeX;screenSizeY
 bind 3:alt,cmd move screenSizeX/2;0 screenSizeX/2;screenSizeY
 bind 4:alt,cmd move screenSizeX/2;0 screenSizeX/2;screenSizeY/2
 bind 5:alt,cmd move screenSizeX/2;screenSizeY/2 screenSizeX/2;screenSizeY/2
+bind 6:alt,cmd move 3*screenSizeX/4;0 screenSizeX/4;screenSizeY/2
 
 # Resize Bindings
 #bind right:alt,cmd       resize +10%  +0%
