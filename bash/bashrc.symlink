@@ -15,7 +15,7 @@ export CLICOLOR=1
 export DOTFILES="${HOME}/src/dotfiles"
 export MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=1G"
 export MANPAGER="$(brew --prefix)/bin/most -s"
-DOCKER_HOST=tcp://:2375
+export DOCKER_HOST=tcp://192.168.59.103:2375
 export CHROME_BIN='/opt/homebrew-cask/Caskroom/google-chrome/stable-channel/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
