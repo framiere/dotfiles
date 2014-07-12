@@ -33,7 +33,7 @@ PATH=$(brew --prefix)/bin:${PATH}
 PATH=${DOTFILES}/bin:${PATH}
 PATH=${HOME}/.jenv/bin:${PATH}
 
-eval "$(jenv init -)"
+[ -f jenv ] && eval "$(jenv init -)"
 
 cdf() {
     target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
