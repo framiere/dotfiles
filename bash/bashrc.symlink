@@ -25,7 +25,7 @@ for config_file in ${DOTFILES}/**/*.bashrc; do
 done
 unset config_file
 
-CDPATH=.:${HOME}:${HOME}/src
+CDPATH=:${HOME}:${HOME}/src
 
 PATH=./node_modules/.bin:${PATH}
 PATH=${HOME}/bin:${PATH}
