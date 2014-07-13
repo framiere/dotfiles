@@ -34,5 +34,4 @@ PATH=$(brew --prefix)/bin:${PATH}
 PATH=${DOTFILES}/bin:${PATH}
 PATH=${HOME}/.jenv/bin:${PATH}
 
-[ -f jenv ] && eval "$(jenv init -)"
-
+[ -f ~/.jenv/bin/jenv ] && eval "$(jenv init -)"
