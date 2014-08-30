@@ -10,3 +10,7 @@ alias mci='mvn clean install'
 alias gc='gcutil'
 alias db='docker build -t $(whoami)/$(basename $(pwd)) .'
 alias dr='docker run -ti $(whoami)/$(basename $(pwd))'
+
+docker-ip() {
+  boot2docker ip 2> /dev/null
+}
