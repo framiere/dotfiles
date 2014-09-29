@@ -7,6 +7,7 @@ alias wip='git wip'
 alias amend='git amend'
 alias got='git'
 alias mci='mvn clean install'
+alias mate='atom'
 #alias jekyll='docker run --rm -v "$PWD:/src" -p 4000:4000 grahamc/jekyll'
 #alias kube='~/src/kubernetes/cluster/kubecfg.sh'
 
