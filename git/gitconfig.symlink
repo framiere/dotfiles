@@ -4,9 +4,9 @@
 
 [github]
 	user = dgageot
-		
+
 [core]
-	editor = mate -wl1
+	editor = atom --wait
 	excludesfile = ~/.gitignore
 
 [hub]
