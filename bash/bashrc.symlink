@@ -18,6 +18,8 @@ export MANPAGER="$(brew --prefix)/bin/most -s"
 export DOCKER_HOST=tcp://192.168.59.103:2375
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export CHROME_BIN='/opt/homebrew-cask/Caskroom/google-chrome/stable-channel/Google Chrome.app/Contents/MacOS/Google Chrome'
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
 
 for config_file in ${DOTFILES}/**/*.bashrc; do
   source $config_file

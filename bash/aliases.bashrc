@@ -9,6 +9,9 @@ alias got='git'
 alias mci='mvn clean install'
 alias mate='atom'
 alias ta='tmux a -t'
+alias de='atom Dockerfile'
+alias more='less'
+
 #alias jekyll='docker run --rm -v "$PWD:/src" -p 4000:4000 grahamc/jekyll'
 #alias kube='~/src/kubernetes/cluster/kubecfg.sh'
 
