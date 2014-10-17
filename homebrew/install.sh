@@ -33,17 +33,12 @@ if [ ! -z "${TO_INSTALL}" ]; then
 	brew cask install ${TO_INSTALL}
 fi
 
-brew cask alfred link
 
 # Install terminal tools
 #
 if [ ! -f $(brew --prefix)/bin/gitx ]; then
 	echo "Install gitx terminal tool"
 	ln -s /opt/homebrew-cask/Caskroom/gitx/latest/GitX.app/Contents/Resources/gitx $(brew --prefix)/bin/gitx
-fi
-if [ ! -f $(brew --prefix)/bin/mate ]; then
-	echo "Install mate terminal tool"
-	cp /opt/homebrew-cask/Caskroom/textmate/latest/TextMate.app/Contents/Resources/mate $(brew --prefix)/bin/mate
 fi
 if [ ! -d ~/.jenv ]; then
 	echo "Install jenv"
