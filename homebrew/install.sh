@@ -1,5 +1,11 @@
 #!/bin/sh
 
+command -v gcloud >/dev/null 2>&1
+if [ "$?" -ne "0" ]; then
+  echo "Install gcloud"
+  curl https://sdk.cloud.google.com | bash
+fi
+
 command -v brew >/dev/null 2>&1
 if [ "$?" -ne "0" ]; then
     echo 'Install Homebrew: http://brew.sh/'
@@ -32,7 +38,6 @@ TO_INSTALL=$(comm -13 /tmp/installed cask-formulas)
 if [ ! -z "${TO_INSTALL}" ]; then
 	brew cask install ${TO_INSTALL}
 fi
-
 
 # Install terminal tools
 #
