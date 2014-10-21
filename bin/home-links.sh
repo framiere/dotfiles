@@ -4,4 +4,3 @@ sudo rm -Rf ~/Documents ~/java ~/Movies ~/Pictures
 sudo ln -s "${HOME}/Google Drive/Documents" ${HOME}/Documents
 sudo ln -s "${HOME}/Google Drive/Movies" ${HOME}/Movies
 sudo ln -s "${HOME}/Google Drive/Pictures" ${HOME}/Pictures
-sudo ln -s "${HOME}/Google Drive/Documents/java" ${HOME}/java
