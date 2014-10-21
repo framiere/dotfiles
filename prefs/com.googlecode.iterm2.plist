@@ -90,8 +90,13 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>1436 297 924 485 0 0 2560 1417 </string>
+	<string>1448 312 924 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1929 141 585 451 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -125,7 +130,7 @@
 				<key>Green Component</key>
 				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.73333334922790527</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -204,9 +209,9 @@
 				<key>Blue Component</key>
 				<real>0.73333334922790527</real>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.4773004949092865</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.11628719419240952</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
