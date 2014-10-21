@@ -40,6 +40,9 @@ if [ ! -f $(brew --prefix)/bin/gitx ]; then
 	echo "Install gitx terminal tool"
 	ln -s /opt/homebrew-cask/Caskroom/gitx/latest/GitX.app/Contents/Resources/gitx $(brew --prefix)/bin/gitx
 fi
+
+# Install jenv
+#
 if [ ! -d ~/.jenv ]; then
 	echo "Install jenv"
 	git clone https://github.com/gcuisinier/jenv.git ~/.jenv
