@@ -15,7 +15,7 @@ LIGHT_GREEN="\[\033[1;32m\]"
 
 function parse_git_branch {
   git rev-parse --git-dir &> /dev/null
-  git_status="$(git status -u no 2> /dev/null)"
+  git_status="$(git status 2> /dev/null)"
   branch_pattern="^On branch ([^${IFS}]*)"
   remote_pattern="Your branch is (.*) of"
   diverge_pattern="Your branch and (.*) have diverged"
@@ -46,14 +46,13 @@ function git_dirty_flag {
 
 function prompt_func() {
     previous_return_value=$?;
-    #The lowercase w is the full current working directory
-    prompt="${TITLEBAR}${BLUE}[${RED}\w${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE}"
+    prompt="${WHITE}\w${LIGHT_GREEN}$(parse_git_branch)${COLOR_NONE} "
 
     if test $previous_return_value -eq 0
     then
         PS1="${prompt}> "
     else
-        PS1="${prompt}${RED}>${COLOR_NONE} "
+        PS1="${prompt}${WHITE}>${COLOR_NONE} "
     fi
 }
 
