@@ -35,9 +35,13 @@ setw -g window-status-current-bg blue
 
 # Pane Switching Using Mouse
 set-option -g mouse-select-pane on
+set-option -g mouse-select-window on
 
 # Automatically set window title
 setw -g automatic-rename on
 
 # Default session
 new -d -s "tmux"
+
+# Support scroll with mouse
+set-window-option -g mode-mouse on
