@@ -1,5 +1,4 @@
 caskroom/versions/java7
-atom
 colloquy
 dropbox
 eclipse-ide
@@ -17,6 +16,7 @@ openoffice
 pacifist
 skype
 slate
+textmate
 transmission
 vagrant
 vlc

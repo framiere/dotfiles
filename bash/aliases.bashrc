@@ -7,9 +7,8 @@ alias wip='git wip'
 alias amend='git amend'
 alias got='git'
 alias mci='mvn clean install'
-alias mate='atom'
 alias ta='tmux a -t'
-alias de='atom Dockerfile'
+alias de='mate Dockerfile'
 alias more='less'
 
 docker-ip() {

@@ -6,7 +6,7 @@
 	user = dgageot
 
 [core]
-	editor = atom --wait
+	editor = mate -wl1
 	excludesfile = ~/.gitignore
 
 [hub]
