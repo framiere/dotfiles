@@ -1,7 +1,7 @@
 #!/bin/bash
 
 JENV_HOME=~/.jenv
-JENV=${JENV_HOME}/bin/jenv
+JENV=$(brew --prefix)/bin/jenv
 
 for version in `${JENV} versions --bare`; do
 	${JENV} remove ${version}

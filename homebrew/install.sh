@@ -46,16 +46,12 @@ if [ ! -f $(brew --prefix)/bin/gitx ]; then
 	ln -s /opt/homebrew-cask/Caskroom/gitx/latest/GitX.app/Contents/Resources/gitx $(brew --prefix)/bin/gitx
 fi
 
-# Install jenv
+# Configure jenv
 #
-if [ ! -d ~/.jenv ]; then
-	echo "Install jenv"
-	git clone https://github.com/gcuisinier/jenv.git ~/.jenv
-	export PATH="$HOME/.jenv/bin:$PATH"
-	eval "$(jenv init -)"
-	jenv enable-plugin ant
-	jenv enable-plugin golo
-	jenv enable-plugin gradle
-	jenv enable-plugin groovy
-	jenv enable-plugin maven
-fi
+eval "$(jenv init -)"
+jenv enable-plugin export
+jenv enable-plugin ant
+jenv enable-plugin golo
+jenv enable-plugin gradle
+jenv enable-plugin groovy
+jenv enable-plugin maven

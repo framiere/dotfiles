@@ -2,7 +2,7 @@
 
 JAVA_FOLDER=~/java
 JENV_HOME=~/.jenv
-JENV=${JENV_HOME}/bin/jenv
+JENV=$(brew --prefix)/bin/jenv
 RED='\x1B[0;31m'
 GREEN='\x1B[0;32m'
 NC='\x1B[0m' # No Color

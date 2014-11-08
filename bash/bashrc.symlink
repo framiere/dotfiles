@@ -37,7 +37,7 @@ PATH=$(brew --prefix)/bin:${PATH}
 PATH=${DOTFILES}/bin:${PATH}
 PATH=${HOME}/.jenv/bin:${PATH}
 
-[ -f ~/.jenv/bin/jenv ] && eval "$(jenv init -)"
+[ -f $(brew --prefix)/bin/jenv ] && eval "$(jenv init -)"
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 [ -f $(brew --prefix)/etc/profile.d/z.sh ] && . $(brew --prefix)/etc/profile.d/z.sh
