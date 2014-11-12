@@ -34,6 +34,7 @@ CDPATH=:${HOME}:${HOME}/src
 PATH=./node_modules/.bin:${PATH}
 PATH=${HOME}/bin:${PATH}
 PATH=$(brew --prefix)/bin:${PATH}
+PATH=$(brew --prefix)/sbin:${PATH}
 PATH=${DOTFILES}/bin:${PATH}
 PATH=${HOME}/.jenv/bin:${PATH}
 
