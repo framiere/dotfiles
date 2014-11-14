@@ -25,6 +25,7 @@
 	cp = cherry-pick
 	st = status -sb
 	br = branch
+	ci = commit
 	undo = reset --hard "HEAD~1"
 	uncommit = reset "HEAD~1"
 	lg = log --graph --branches --oneline --graph --decorate
