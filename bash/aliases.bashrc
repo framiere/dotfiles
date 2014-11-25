@@ -10,6 +10,7 @@ alias mci='mvn clean install'
 alias ta='tmux a -t'
 alias de='mate Dockerfile'
 alias more='less'
+alias restartvbox='sudo /Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh restart'
 
 docker-ip() {
   boot2docker ip 2> /dev/null
