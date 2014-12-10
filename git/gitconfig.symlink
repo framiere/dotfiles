@@ -1,9 +1,9 @@
 [user]
-	email = david@gageot.net
-	name = David Gageot
+	email = florent@ramiere.com 
+	name = Florent Ramière
 
 [github]
-	user = dgageot
+	user = framiere 
 
 [core]
 	editor = mate -wl1
