@@ -19,3 +19,7 @@ tree
 watch
 wget
 z
+htop
+iftop
+bash-git-prompt
+boot2docker
