@@ -1,4 +1,4 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-[[ -f  ~/google-cloud-sdk/path.bash.inc ]] && source ~/google-cloud-sdk/path.bash.inc
-[[ -f  ~/google-cloud-sdk/completion.bash.inc ]] && source ~/google-cloud-sdk/completion.bash.inc
+[[ -f  ~/dev/google-cloud-sdk/path.bash.inc ]] && source ~/dev/google-cloud-sdk/path.bash.inc
+[[ -f  ~/dev/google-cloud-sdk/completion.bash.inc ]] && source ~/dev/google-cloud-sdk/completion.bash.inc
