@@ -1,6 +1,7 @@
 ack
 ansible
 bash-completion
+git
 gnupg
 ioke
 jenv
