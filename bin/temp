@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Use bash if no command is specified
+args=$@
+if [[ $# = 0 ]]; then
+      args+=`date "+%Hh%Mm%Ss"`
+fi
+TEMP_FOLDER=~/temp/$args
+
+mkdir -p $TEMP_FOLDER
+cd $TEMP_FOLDER
+
+export DIR=$TEMP_FOLDER
