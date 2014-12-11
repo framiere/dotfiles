@@ -54,3 +54,7 @@ jenv enable-plugin ant
 jenv enable-plugin gradle
 jenv enable-plugin groovy
 jenv enable-plugin maven
+
+# Install manually until pygments is in brew 
+#
+sudo easy_install Pygments
